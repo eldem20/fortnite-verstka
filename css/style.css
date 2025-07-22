@@ -1,0 +1,403 @@
+body {
+  background-color: rgb(104, 17, 185);
+  margin: 0px;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+
+header {
+  background-color: rgb(61, 61, 61);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+
+}
+
+.logo img {
+  width: auto;
+  height: 50px;
+  border-radius: 12px;
+  padding: 10px;
+  margin-right: auto;
+}
+
+.buttons {
+
+  display: flex;
+
+  gap: 15px;
+
+
+}
+
+
+a.fortnite-btn {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.fortnite-btn:active {
+  transform: scale(0.96);
+}
+
+.fortnite-btn:before,
+.fortnite-btn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.fortnite-btn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.fortnite-btn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 15px;
+  position: absolute;
+  right: 1px;
+
+}
+
+button:hover {
+  background: rgba(170, 170, 170, 0.062);
+  transition: 0.5s;
+}
+
+button svg {
+  color: #fff;
+
+}
+
+.hero {
+  position: absolute;
+  left: 150px;
+  top: 300px;
+  color: #fff;
+
+}
+
+.hero img {
+  width: auto;
+  height: 150px;
+}
+
+
+.btn {
+  padding: 1rem 2rem;
+  font-weight: 700;
+  background: rgb(34, 34, 34);
+  color: blueviolet;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border-bottom: 2px solid blueviolet;
+  border-right: 2px solid blueviolet;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border-top: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+  border-bottom: 2px solid rgb(238, 103, 238);
+  border-right: 2px solid rgb(238, 103, 238);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px;
+}
+
+
+.info {
+  position: absolute;
+  top: 300px;
+  background-color: rgb(51, 13, 87);
+  border-radius: 12px;
+  padding: 10px;
+  width: 600px;
+}
+
+.info p {
+  font-size: 20px;
+}
+
+
+.voron {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  right: 1000px;
+  
+}
+
+.voron img {
+  height: 800px;
+  width: auto;
+  border-radius: 32px;
+  position: absolute;
+  top: 66px;
+
+
+
+}
+
+
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  right: -1600px;
+  top: 19px;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #1f387e;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #1f387e;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #c5e5e4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #1f387e;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body,
+.info {
+  transition: all 0.5s ease;
+}
+
+
+.animated-button.active {
+  background: linear-gradient(45deg, #ff6b6b, #ffa3a3);
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+}
+
+
+.dark-mode .fortnite-btn {
+  color: #7d2ae8;
+  border: 1px solid #7d2ae8;
+}
+
+.info2 {
+  width: 200px;
+  position: absolute;
+  right: 135px;
+  top: 250px;
+  color: #fff;
+
+
+}
+
+.info2 p {
+  gap: 20px;
+  background-color: rgb(51, 13, 87);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.components {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  left: 500px;
+  top: -110px;
+}
+
+.name {
+  color: #fff;
+  font-size: 55px;
+  position: absolute;
+  right: 635px;
+  bottom: 10px;
+  
+}
+
+.name p {
+  text-shadow: 0 7px 12px rgb(170, 2, 2);
+}
+
+.fortnite-text {
+  font-family: 'Burbank', 'Arial Black', sans-serif;
+  font-size: 28px;
+  color: rgb(80, 80, 80);
+  text-shadow: 0 0 5px rgba(20, 20, 20, 0.5);
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: absolute;
+  left: 900px;
+}
+
+.fortnite-text:hover {
+  text-shadow: 0 0 15px rgba(29, 28, 28, 0.8);
+  transform: scale(1.01);
+}
