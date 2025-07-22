@@ -4,7 +4,6 @@ body {
   font-family: 'Teko', sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 header {
@@ -32,15 +31,13 @@ header {
 
 a.fortnite-btn {
   position: relative;
-  padding: 12px 24px;
-  min-width: 120px;
+  padding: 10px 22px;
   border-radius: 6px;
   border: none;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  font-size: 18px;
 }
 
 .fortnite-btn:active {
@@ -81,12 +78,10 @@ a.fortnite-btn {
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
       40% 90%, 55% 90%, 70% 90%;
   }
-
   50% {
     background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
       50% 50%, 65% 20%, 90% 30%;
   }
-
   100% {
     background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
       50% 40%, 65% 10%, 90% 20%;
@@ -113,12 +108,10 @@ a.fortnite-btn {
     background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
       70% -10%, 70% 0%;
   }
-
   50% {
     background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
       105% 0%;
   }
-
   100% {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
       110% 10%;
@@ -378,124 +371,75 @@ body,
   transform: scale(1.01);
 }
 
-
-img {
-  max-width: 100%;
-  height: auto;
+@media (max-width: 1600px) {
+  .voron img {
+    height: 650px;
+  }
+  .hero {
+    left: 100px;
+  }
 }
 
-
-* {
-  -webkit-tap-highlight-color: transparent;
+@media (max-width: 1200px) {
+  .voron img {
+    height: 500px;
+  }
+  .info {
+    width: 500px;
+  }
 }
 
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+@media (max-width: 992px) {
+  .voron {
+    right: 700px;
+  }
+  .hero {
+    left: 50px;
+    top: 250px;
+  }
+  .name {
+    font-size: 45px;
+    right: 500px;
+  }
 }
-
 
 @media (max-width: 768px) {
-  body {
-    background-color: rgb(70, 10, 126);
-    font-size: 14px;
+  .voron {
+    right: 500px;
   }
-  
-  header {
-    grid-template-columns: 1fr;
-    padding: 10px;
+  .voron img {
+    height: 400px;
   }
-  
-  .logo img {
-    height: 40px;
-    margin: 0 auto;
-  }
-  
-  .buttons {
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 15px;
-  }
-  
-  a.fortnite-btn {
-    min-width: 100px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
   .hero {
-    left: 20px;
-    top: 150px;
+    top: 200px;
   }
-  
+  .info {
+    width: 90%;
+    left: 5%;
+  }
+  .fortnite-text {
+    left: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .voron {
+    right: 300px;
+  }
+  .voron img {
+    height: 300px;
+  }
   .hero img {
     height: 100px;
   }
-  
-  .info {
-    width: 90%;
-    left: 5%;
-    top: 200px;
-  }
-  
-  .info p {
-    font-size: 16px;
-  }
-  
-  .voron {
-    display: none;
-  }
-  
-  .animated-button {
-    right: auto;
-    left: 20px;
-    top: 20px;
-    padding: 12px 24px;
-  }
-  
   .name {
-    font-size: 32px;
-    right: auto;
-    left: 20px;
-    bottom: 20px;
+    font-size: 30px;
+    right: 300px;
   }
-  
-  .fortnite-text {
-    left: 20px;
-    top: 100px;
-    font-size: 20px;
+  .buttons {
+    flex-wrap: wrap;
   }
-  
-  .info2 {
-    width: 90%;
-    right: auto;
-    left: 5%;
-    top: 350px;
-  }
-}
-
-@media (max-width: 480px) {
   .fortnite-btn {
-    min-width: 80px;
     padding: 8px 16px;
-    font-size: 14px;
-  }
-  
-  .hero {
-    top: 120px;
-  }
-  
-  .name {
-    font-size: 24px;
-  }
-}
-
-@media (max-height: 500px) {
-  .hero {
-    top: 100px;
-  }
-  
-  .info {
-    top: 150px;
   }
 }
