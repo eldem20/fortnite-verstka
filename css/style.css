@@ -4,6 +4,7 @@ body {
   font-family: 'Teko', sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
+
 }
 
 header {
@@ -14,6 +15,7 @@ header {
   padding: 20px;
   position: relative;
   z-index: 10;
+
 }
 
 .logo img {
@@ -25,9 +27,14 @@ header {
 }
 
 .buttons {
+
   display: flex;
+
   gap: 15px;
+
+
 }
+
 
 a.fortnite-btn {
   position: relative;
@@ -36,6 +43,7 @@ a.fortnite-btn {
   border: none;
   color: #fff;
   cursor: pointer;
+
   transition: all 0.2s ease;
   text-decoration: none;
 }
@@ -78,10 +86,12 @@ a.fortnite-btn {
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
       40% 90%, 55% 90%, 70% 90%;
   }
+
   50% {
     background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
       50% 50%, 65% 20%, 90% 30%;
   }
+
   100% {
     background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
       50% 40%, 65% 10%, 90% 20%;
@@ -108,10 +118,12 @@ a.fortnite-btn {
     background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
       70% -10%, 70% 0%;
   }
+
   50% {
     background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
       105% 0%;
   }
+
   100% {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
       110% 10%;
@@ -128,6 +140,7 @@ button {
   margin-right: 15px;
   position: absolute;
   right: 1px;
+
 }
 
 button:hover {
@@ -137,6 +150,7 @@ button:hover {
 
 button svg {
   color: #fff;
+
 }
 
 .hero {
@@ -144,12 +158,14 @@ button svg {
   left: 150px;
   top: 300px;
   color: #fff;
+
 }
 
 .hero img {
   width: auto;
   height: 150px;
 }
+
 
 .btn {
   padding: 1rem 2rem;
@@ -177,6 +193,7 @@ button svg {
     rgba(240, 46, 170, 0.2) 15px 15px;
 }
 
+
 .info {
   position: absolute;
   top: 300px;
@@ -190,11 +207,13 @@ button svg {
   font-size: 20px;
 }
 
+
 .voron {
   position: fixed;
   top: 0;
   z-index: 1000;
   right: 1000px;
+  
 }
 
 .voron img {
@@ -203,7 +222,11 @@ button svg {
   border-radius: 32px;
   position: absolute;
   top: 66px;
+
+
+
 }
+
 
 .animated-button {
   position: relative;
@@ -294,24 +317,29 @@ button svg {
   opacity: 1;
 }
 
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 
 body,
 .info {
   transition: all 0.5s ease;
 }
 
+
 .animated-button.active {
   background: linear-gradient(45deg, #ff6b6b, #ffa3a3);
   box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
 }
+
 
 .dark-mode .fortnite-btn {
   color: #7d2ae8;
@@ -324,6 +352,8 @@ body,
   right: 135px;
   top: 250px;
   color: #fff;
+
+
 }
 
 .info2 p {
@@ -349,6 +379,7 @@ body,
   position: absolute;
   right: 635px;
   bottom: 10px;
+  
 }
 
 .name p {
@@ -369,77 +400,4 @@ body,
 .fortnite-text:hover {
   text-shadow: 0 0 15px rgba(29, 28, 28, 0.8);
   transform: scale(1.01);
-}
-
-@media (max-width: 1600px) {
-  .voron img {
-    height: 650px;
-  }
-  .hero {
-    left: 100px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .voron img {
-    height: 500px;
-  }
-  .info {
-    width: 500px;
-  }
-}
-
-@media (max-width: 992px) {
-  .voron {
-    right: 700px;
-  }
-  .hero {
-    left: 50px;
-    top: 250px;
-  }
-  .name {
-    font-size: 45px;
-    right: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .voron {
-    right: 500px;
-  }
-  .voron img {
-    height: 400px;
-  }
-  .hero {
-    top: 200px;
-  }
-  .info {
-    width: 90%;
-    left: 5%;
-  }
-  .fortnite-text {
-    left: 50px;
-  }
-}
-
-@media (max-width: 576px) {
-  .voron {
-    right: 300px;
-  }
-  .voron img {
-    height: 300px;
-  }
-  .hero img {
-    height: 100px;
-  }
-  .name {
-    font-size: 30px;
-    right: 300px;
-  }
-  .buttons {
-    flex-wrap: wrap;
-  }
-  .fortnite-btn {
-    padding: 8px 16px;
-  }
 }
